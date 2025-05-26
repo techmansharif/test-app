@@ -8,7 +8,7 @@ function App() {
 
   const handleAdd = async () => {
  
-    const res = await fetch("http://localhost:8000/add", {
+    const res = await fetch("https://fastapi-backend-208251878692.us-central1.run.app/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ a: Number(a), b: Number(b) }),
