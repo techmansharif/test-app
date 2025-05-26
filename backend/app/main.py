@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.router import quizzes
 from pydantic import BaseModel
+import uvicorn
+import os 
+
 
 app = FastAPI()
 
@@ -18,3 +21,9 @@ app.add_middleware(
 
 
 app.include_router(quizzes.router)
+
+
+if __name__ == "__main__":
+    # Use the PORT environment variable provided by Cloud Run, default to 8000
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
