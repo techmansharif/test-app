@@ -44,3 +44,4 @@ jobs:
             --allow-unauthenticated \
             --port 8000 \
             --project ${{ secrets.GCLOUD_PROJECT_ID }}
+            --verbosity=debug
