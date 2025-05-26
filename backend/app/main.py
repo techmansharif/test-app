@@ -12,8 +12,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000",
-                   "https://test-deployment-e19fb.web.app/",
-                   "https://test-deployment-e19fb.firebaseapp.com/"],  
+                   "https://test-deployment-e19fb.web.app",
+                   "https://test-deployment-e19fb.firebaseapp.com"],  
     allow_methods=["*"],
     allow_headers=["*"],
 )
