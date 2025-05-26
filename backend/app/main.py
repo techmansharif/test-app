@@ -8,7 +8,9 @@ app = FastAPI()
 # Allow frontend (React) running on localhost:3000 to talk to backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  
+    allow_origins=["http://localhost:3000",
+                   "https://test-deployment-e19fb.web.app/",
+                   "https://test-deployment-e19fb.firebaseapp.com/"],  
     allow_methods=["*"],
     allow_headers=["*"],
 )
